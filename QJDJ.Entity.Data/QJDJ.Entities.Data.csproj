@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2D5874DC-8C05-4120-9AC9-EC1CD24E75EE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QJDJ.Entity.Data</RootNamespace>
+    <AssemblyName>QJDJ.Entity.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FromSqlModel\ChargeInfo.cs" />
+    <Compile Include="FromSqlModel\C__MigrationHistory.cs" />
+    <Compile Include="DbContextModel\QJModelContext.cs" />
+    <Compile Include="FromSqlModel\GoodsAttribute.cs" />
+    <Compile Include="FromSqlModel\GoodsCategory.cs" />
+    <Compile Include="FromSqlModel\GoodsComment.cs" />
+    <Compile Include="FromSqlModel\GoodsInfo.cs" />
+    <Compile Include="FromSqlModel\GoodsInfoCategory.cs" />
+    <Compile Include="FromSqlModel\GoodsInfo_New.cs" />
+    <Compile Include="FromSqlModel\GoodsPriceZhongchu.cs" />
+    <Compile Include="FromSqlModel\GoodsShelves.cs" />
+    <Compile Include="FromSqlModel\GoodsSupplier.cs" />
+    <Compile Include="FromSqlModel\GrabActivityInfo.cs" />
+    <Compile Include="FromSqlModel\GrabFinishError.cs" />
+    <Compile Include="FromSqlModel\GrabOrderInfoAll.cs" />
+    <Compile Include="FromSqlModel\GrabOrderInfoAll123.cs" />
+    <Compile Include="FromSqlModel\GrabPickupError.cs" />
+    <Compile Include="FromSqlModel\GrabUserAssetDetail.cs" />
+    <Compile Include="FromSqlModel\GrabUserAssetInfo.cs" />
+    <Compile Include="FromSqlModel\GrabUserInfo.cs" />
+    <Compile Include="FromSqlModel\GrabUserLocation.cs" />
+    <Compile Include="FromSqlModel\GrabUserOrder.cs" />
+    <Compile Include="FromSqlModel\GrabUserOrder123.cs" />
+    <Compile Include="FromSqlModel\GrabUserOrderRecord.cs" />
+    <Compile Include="FromSqlModel\GrabUserOrderRecord123.cs" />
+    <Compile Include="FromSqlModel\GrabUserWithdrawRecord.cs" />
+    <Compile Include="FromSqlModel\GrabWithdrawRule.cs" />
+    <Compile Include="FromSqlModel\GroupAllGoodsInfo.cs" />
+    <Compile Include="FromSqlModel\GroupAllGroup.cs" />
+    <Compile Include="FromSqlModel\GroupHeadInfo.cs" />
+    <Compile Include="FromSqlModel\GroupOrderInfo.cs" />
+    <Compile Include="FromSqlModel\GroupOrderInfo0755.cs" />
+    <Compile Include="FromSqlModel\GroupUserInfo.cs" />
+    <Compile Include="FromSqlModel\MpBannerList.cs" />
+    <Compile Include="FromSqlModel\MpCategoryGoodsDetail.cs" />
+    <Compile Include="FromSqlModel\MpCategoryGoodsList.cs" />
+    <Compile Include="FromSqlModel\MpCategoryList.cs" />
+    <Compile Include="FromSqlModel\MpGroupInfo.cs" />
+    <Compile Include="FromSqlModel\MpGroupOrder.cs" />
+    <Compile Include="FromSqlModel\MpGroupRegion.cs" />
+    <Compile Include="FromSqlModel\MpGroupUserAddr.cs" />
+    <Compile Include="FromSqlModel\MpMenuList.cs" />
+    <Compile Include="FromSqlModel\OfflineOrderInfo.cs" />
+    <Compile Include="FromSqlModel\OfflineOrderItemInfo.cs" />
+    <Compile Include="FromSqlModel\OrderEvaluation.cs" />
+    <Compile Include="FromSqlModel\OrderExpress.cs" />
+    <Compile Include="FromSqlModel\OrderGoodsToComment.cs" />
+    <Compile Include="FromSqlModel\OrderInfo.cs" />
+    <Compile Include="FromSqlModel\OrderInfo_old.cs" />
+    <Compile Include="FromSqlModel\OrderItemInfo.cs" />
+    <Compile Include="FromSqlModel\OrderItemInfo_old.cs" />
+    <Compile Include="FromSqlModel\OrderLogisticsInfo.cs" />
+    <Compile Include="FromSqlModel\OrderManage.cs" />
+    <Compile Include="FromSqlModel\QdOrderInfo.cs" />
+    <Compile Include="FromSqlModel\SearchRecord.cs" />
+    <Compile Include="FromSqlModel\ShopInfo.cs" />
+    <Compile Include="FromSqlModel\SysAgent.cs" />
+    <Compile Include="FromSqlModel\SysBannerContentArray.cs" />
+    <Compile Include="FromSqlModel\SysBannerInfo.cs" />
+    <Compile Include="FromSqlModel\SysCommonKey.cs" />
+    <Compile Include="FromSqlModel\SysCommonValue.cs" />
+    <Compile Include="FromSqlModel\SysHomeTemplate.cs" />
+    <Compile Include="FromSqlModel\SysHomeTemplateArrayDetail.cs" />
+    <Compile Include="FromSqlModel\SysHomeTemplateGroup.cs" />
+    <Compile Include="FromSqlModel\SysHomeTemplateGroupArray.cs" />
+    <Compile Include="FromSqlModel\SysManagerInfo.cs" />
+    <Compile Include="FromSqlModel\SysNoticeInfo.cs" />
+    <Compile Include="FromSqlModel\SysPhoneCode.cs" />
+    <Compile Include="FromSqlModel\SysRegionInfo.cs" />
+    <Compile Include="FromSqlModel\SysStationBuild.cs" />
+    <Compile Include="FromSqlModel\SysStationInfo.cs" />
+    <Compile Include="FromSqlModel\SysStationInfoWX.cs" />
+    <Compile Include="FromSqlModel\SysStationInfo_old.cs" />
+    <Compile Include="FromSqlModel\SysStationOrderRec.cs" />
+    <Compile Include="FromSqlModel\SysUserAddress.cs" />
+    <Compile Include="FromSqlModel\SysUserAddressMiniWX.cs" />
+    <Compile Include="FromSqlModel\SysUserAddressWX.cs" />
+    <Compile Include="FromSqlModel\SysUserDeviceToken.cs" />
+    <Compile Include="FromSqlModel\SysUserGoodsFavorite.cs" />
+    <Compile Include="FromSqlModel\SysUserInfo.cs" />
+    <Compile Include="FromSqlModel\SysUserInfoWX.cs" />
+    <Compile Include="FromSqlModel\SysUserIntegralRecord.cs" />
+    <Compile Include="FromSqlModel\SysUserMoneyRecord.cs" />
+    <Compile Include="FromSqlModel\SysUserShopCar.cs" />
+    <Compile Include="FromSqlModel\SysUserSigninRecord.cs" />
+    <Compile Include="FromSqlModel\SysUserThird.cs" />
+    <Compile Include="FromSqlModel\SysUserWallet.cs" />
+    <Compile Include="FromSqlModel\SysUserWalletWX.cs" />
+    <Compile Include="FromSqlModel\SysWxAccountInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="UIViewModel\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

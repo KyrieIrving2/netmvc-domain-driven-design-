@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2042
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 - Infrastructure  (基础建设层)", "01 - Infrastructure  (基础建设层)", "{8679A307-1517-4142-A98C-90833E91883D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 - Core (业务核心层)", "02 - Core (业务核心层)", "{E5E3022C-4D52-46DD-9518-BE9AAFC9115E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 - Common  (公共方法层)", "03 - Common  (公共方法层)", "{2C528D6C-8573-4EBC-BA38-E5C70438B9BD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04 - Presentation  (展示层)", "04 - Presentation  (展示层)", "{09F6ACF8-A381-44EC-BBB6-AA3E801467BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QJDJ.Reository.Core", "QJDJ.Reository.Core\QJDJ.Reository.Core.csproj", "{F6E918C9-BC6C-4573-B736-7F951DFBB305}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QJDJ.Common.Action", "QJDJ.Common.Action\QJDJ.Common.Action.csproj", "{2CE93D25-546C-41B2-93E0-175185EF20E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManagementForQJDJ.Web", "ManagementForQJDJ.Web\ManagementForQJDJ.Web.csproj", "{EF0F9B57-94EA-4D9E-A7A8-9B25934B708E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QJDJ.Entities.Data", "QJDJ.Entities.Data\QJDJ.Entities.Data.csproj", "{A411AD2A-CB9C-463F-AB9B-EC8D7F59A0C8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F6E918C9-BC6C-4573-B736-7F951DFBB305}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6E918C9-BC6C-4573-B736-7F951DFBB305}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6E918C9-BC6C-4573-B736-7F951DFBB305}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6E918C9-BC6C-4573-B736-7F951DFBB305}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CE93D25-546C-41B2-93E0-175185EF20E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CE93D25-546C-41B2-93E0-175185EF20E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CE93D25-546C-41B2-93E0-175185EF20E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CE93D25-546C-41B2-93E0-175185EF20E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF0F9B57-94EA-4D9E-A7A8-9B25934B708E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF0F9B57-94EA-4D9E-A7A8-9B25934B708E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF0F9B57-94EA-4D9E-A7A8-9B25934B708E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF0F9B57-94EA-4D9E-A7A8-9B25934B708E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A411AD2A-CB9C-463F-AB9B-EC8D7F59A0C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A411AD2A-CB9C-463F-AB9B-EC8D7F59A0C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A411AD2A-CB9C-463F-AB9B-EC8D7F59A0C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A411AD2A-CB9C-463F-AB9B-EC8D7F59A0C8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F6E918C9-BC6C-4573-B736-7F951DFBB305} = {E5E3022C-4D52-46DD-9518-BE9AAFC9115E}
+		{2CE93D25-546C-41B2-93E0-175185EF20E7} = {2C528D6C-8573-4EBC-BA38-E5C70438B9BD}
+		{EF0F9B57-94EA-4D9E-A7A8-9B25934B708E} = {09F6ACF8-A381-44EC-BBB6-AA3E801467BC}
+		{A411AD2A-CB9C-463F-AB9B-EC8D7F59A0C8} = {8679A307-1517-4142-A98C-90833E91883D}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {00FCF50D-AF41-4A43-AFB3-E721AB7DBB04}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,327 @@
+﻿@model IEnumerable<QJDJ.Entities.Data.FromSqlModel.GoodsInfo>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ShopInfo.sShopName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gStationId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gSupplierId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gThumbImg1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gThumbImg2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gPicArray)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gTagText)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gTagValue1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gTagValue2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gTagValue3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gTagValue4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gTagValue5)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gTagValue6)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gTagValue7)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gTagValue8)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gTagValue9)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gConentSummary)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gContentDetail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gSlogan)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gReminder)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gDistribution)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gSalesVolume)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gBrand)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gSourceArea)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gStoreMode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gServiceMode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gKeys)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gLabel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gDiscount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gWarnCount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gSafeDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gShangjiaDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gXiajiaDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gAddDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gState)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gRemark)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gFillerId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gFillDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gIsCancel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gCancelId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gCancelDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gContentDetailUrl)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gShortPinyin)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gStorage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gSeason)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gDaySalesAverage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gExternalNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gIsUseBean)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ShopInfo.sShopName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.gStationId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.gSupplierId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.gNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.gName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.gThumbImg1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.gThumbImg2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.gPicArray)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.gTagText)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.gTagValue1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.gTagValue2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.gTagValue3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.gTagValue4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.gTagValue5)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.gTagValue6)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.gTagValue7)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.gTagValue8)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.gTagValue9)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.gConentSummary)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.gContentDetail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.gSlogan)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.gReminder)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.gDistribution)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.gSalesVolume)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.gBrand)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.gSourceArea)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.gStoreMode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.gServiceMode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.gKeys)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.gLabel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.gDiscount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.gWarnCount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.gSafeDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.gShangjiaDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.gXiajiaDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.gAddDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.gState)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.gRemark)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.gFillerId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.gFillDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.gIsCancel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.gCancelId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.gCancelDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.gContentDetailUrl)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.gShortPinyin)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.gStorage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.gSeason)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.gDaySalesAverage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.gExternalNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.gIsUseBean)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.gId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.gId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.gId })
+        </td>
+    </tr>
+}
+
+</table>

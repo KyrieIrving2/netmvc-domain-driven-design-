@@ -1,0 +1,295 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<link href="~/Content/themes/easyui/bootstrap/easyui.css" rel="stylesheet" />
+<link href="~/Content/themes/easyui/icon.css" rel="stylesheet" />
+<header>
+    <div class="content-wrapper">
+        <div class="float-left">
+            <p class="site-title">
+                <a href="~/">ASP.NET Web API</a>
+            </p>
+        </div>
+    </div>
+</header>
+<div id="body">
+    <section class="featured">
+        <div class="content-wrapper">
+            @*<hgroup class="title">
+                    <h1>欢迎使用 ASP.NET Web API!</h1>
+                    <h2>这是一个简单的WebAPI入门Demo.</h2>
+                </hgroup>*@
+            <p>
+                <strong>搜索：</strong>
+                ①产品类型：
+                <select id="productTypes" name="productTypes" style="width: 120px; height: 34px;">
+                    <option value="-1">--请选择--</option>
+                    <option value="0">移动电话</option>
+                    <option value="1">便携式计算机</option>
+                    <option value="2">电视游戏机</option>
+                </select>
+                ②产品名称：<input id="productName" name="productName" type="text" />
+                <input id="btnSearchByName" name="btnSearchByName" type="button" value="搜 索" />
+                <input id="btnSearchAll" name="searchAll" type="button" value="全 部" />
+            </p>
+            <p>
+                <strong>新增：</strong>
+                <br />
+                产品名称：<input id="newProductName" name="newProductName" type="text" />
+                产品类型：<select id="newProductType" name="newProductType" style="width: 120px; height: 34px;">
+                    <option value="-1">--请选择--</option>
+                    <option value="0">移动电话</option>
+                    <option value="1">便携式计算机</option>
+                    <option value="2">电视游戏机</option>
+                </select>
+                <br />
+                产品价格：<input id="newProductPrice" name="newProductPrice" type="text" />
+                <input id="btnPostProduct" name="btnPostProduct" type="button" value="新 增" />
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        <h3>下面是从WebAPI获取的数据集:</h3>
+        <div id="result">
+        </div>
+        @*<ol class="round">
+                <li class="one">
+                    <h5>开始使用</h5>
+                    ASP.NET Web API  是一个框架，您可以通过该框架轻松生成可访问
+                    多种客户端(包括浏览器和移动设备)的 HTTP 服务。ASP.NET Web API
+                    是一个用于在 .NET Framework 之上生成 REST 样式的应用程序的理想平台。
+                    <a href="http://go.microsoft.com/fwlink/?LinkId=245160">了解详细信息...</a>
+                </li>
+            </ol>*@
+    </section>
+</div>
+<!-- jBox modal -->
+<div id="myMsgModal" class="notshow">
+</div>
+<!-- jBox edit modal -->
+<div id="myEditModal" class="notshow">
+    <input id="hiddProductId" type="hidden" />
+    <table width="100%">
+        <tr>
+            <td align="right">产品名称：</td>
+            <td>
+                <input id="editProductName" name="editProductName" type="text" />
+            </td>
+        </tr>
+        <tr>
+            <td align="right">产品类型：</td>
+            <td>
+                <select id="editProductType" name="editProductType" style="width: 120px; height: 34px;">
+                    <option value="-1">--请选择--</option>
+                    <option value="0">移动电话</option>
+                    <option value="1">便携式计算机</option>
+                    <option value="2">电视游戏机</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td align="right">产品价格：</td>
+            <td>
+                <input id="editProductPrice" name="editProductPrice" type="text" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <a id="btnPutProduct" href="#" class="easyui-linkbutton">确定</a>
+                <a id="btnCloseModal" href="#" class="easyui-linkbutton">关闭</a>
+            </td>
+        </tr>
+    </table>
+</div>
+@section scripts{
+    <script src="~/Scripts/jquery-1.7.1.min.js"></script>
+    <script src="~/Content/themes/easyui/jquery.easyui.min.js"></script>
+    <script src="~/Content/themes/easyui/easyui-lang-zh_CN.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            initData();
+            bindClick();
+        });
+
+        function initData() {
+            $.getJSON("api/webapi/Product", function (data) {
+                if (data != null) {
+                    if ($("#resultList").length > 0) {
+                        $("#resultList").remove();
+                    }
+
+                    var html = "<ol id='resultList' class='round'>";
+                    $.each(data, function (key, value) {
+                        html += "<li class='one'><h5>" + value.Name + "</h5>类型：" + value.Category
+                            + " 价格：" + value.Price + "  | <a href='#' onclick='editProduct(" + value.Id + ")'>编辑</a><a href='#' onclick='deleteProduct(" + value.Id + ")'>删除</a></li>";
+                    });
+                    html += "</ol>";
+                    $("#result").append(html);
+                }
+            });
+        }
+
+        function bindClick() {
+            // 01.按产品类型搜索产品
+            $("#productTypes").bind("change", function () {
+                $.getJSON("api/webapi/Product", { category: $(this).find("option:selected").text() }, function (data) {
+                    if (data != null) {
+                        $("#resultList").remove();
+                        var html = "<ol id='resultList' class='round'>";
+                        $.each(data, function (key, value) {
+                            html += "<li class='one'><h5>" + value.Name + "</h5>类型：" + value.Category
+                                + " 价格：" + value.Price + "  | <a href='#' onclick='editProduct(" + value.Id + ")'>编辑</a><a href='#' onclick='deleteProduct(" + value.Id + ")'>删除</a></li>";
+                        });
+                        html += "</ol>";
+                        $("#result").append(html);
+                    }
+                });
+            });
+            // 02.按产品名搜索产品
+            $("#btnSearchByName").bind("click", function () {
+                var searchName = $("#productName").val();
+                if (searchName == "") {
+                    showMsg("提示", "您还没有输入要搜索的产品名称");
+                }
+                $.getJSON("api/webapi/Product", { productName: searchName }, function (data) {
+                    if (data != null) {
+                        $("#resultList").remove();
+                        var html = "<ol id='resultList' class='round'>";
+                        html += "<li class='one'><h5>" + data.Name + "</h5>类型：" + data.Category
+                                + " 价格：" + data.Price + "  | <a href='#' onclick='editProduct(" + data.Id + ")'>编辑</a><a href='#' onclick='deleteProduct(" + data.Id + ")'>删除</a></li>";
+                        html += "</ol>";
+                        $("#result").append(html);
+                        clearText();
+                    }
+                });
+            });
+            // 03.搜索全部产品信息
+            $("#btnSearchAll").bind("click", initData);
+            // 04.新增一个产品信息
+            $("#btnPostProduct").bind("click", function () {
+                var productName = $("#newProductName").val();
+                var productCategory = $("#newProductType").find("option:selected").text();
+                var productPrice = $("#newProductPrice").val();
+
+                if (productName == "") {
+                    showMsg("提示", "请输入产品名称");
+                }
+                else if (productCategory == "" || productCategory == "--请选择--") {
+                    showMsg("提示", "请选择产品类型");
+                }
+                else if (productPrice == "") {
+                    showMsg("提示", "请输入产品价格");
+                }
+                else if (isNaN(productPrice)) {
+                    showMsg("提示", "产品价格请输入数字类型");
+                }
+                else {
+                    $.post("api/webapi/Product", {
+                        Name: productName,
+                        Category: productCategory,
+                        Price: productPrice
+                    }, function (data) {
+                        if (data != null && data == true) {
+                            initData();
+                            clearText();
+                            showMsg("提示", "添加新产品操作成功");
+                        }
+                        else {
+                            showMsg("提示", "添加新产品操作失败");
+                        }
+                    });
+                }
+            });
+            // 07.修改一个产品信息
+            $("#btnPutProduct").bind("click", function () {
+                var productId = $("#hiddProductId").val();
+                $.ajax({
+                    type: "PUT",
+                    url: "/api/webapi/Product/" + productId,
+                    data: {
+                        Id: productId,
+                        Name: $("#editProductName").val(),
+                        Category: $("#editProductType").find("option:selected").text(),
+                        Price: $("#editProductPrice").val()
+                    },
+                    success: function (data) {
+                        if (data == true) {
+                            initData();
+                            $("#myEditModal").window("close");
+                            showMsg("提示", "您已成功修改那玩意");
+                        }
+                        else {
+                            showMsg("提示", "修改那玩意操作失败");
+                        }
+                    }
+                });
+            });
+            // 关闭模态对话框
+            $("#btnCloseModal").bind("click", function () {
+                $("#myEditModal").window("close");
+            });
+        }
+        // 05.编辑一个产品信息
+        function editProduct(productId) {
+            $.getJSON("api/webapi/Product", { id: productId }, function (data) {
+                if (data != null) {
+                    $("#hiddProductId").val(data.Id);
+                    $("#editProductName").val(data.Name);
+                    switch (data.Category) {
+                        case "移动电话":
+                            $("#editProductType").val("0");
+                            break;
+                        case "便携式计算机":
+                            $("#editProductType").val("1");
+                            break;
+                        case "电视游戏机":
+                            $("#editProductType").val("2");
+                            break;
+                    }
+                    $("#editProductPrice").val(data.Price);
+                }
+            });
+            $("#myEditModal").show();
+            $("#myEditModal").window({
+                title: "编辑产品信息",
+                modal: true,
+                collapsible: true,
+                minimizable: false,
+                maximizable: false,
+                resizable: false,
+                width: 500,
+                height: 220
+            });
+        }
+        // 06.删除一个产品信息
+        function deleteProduct(productId) {
+            $.messager.confirm("提示", "您确定要删除这玩意？", function (r) {
+                if (r) {
+                    $.ajax({
+                        type: "DELETE",
+                        url: "/api/webapi/Product/" + productId,
+                        data: {},
+                        success: function (data) {
+                            if (data == true) {
+                                initData();
+                                showMsg("提示", "您已成功删除那玩意");
+                            }
+                            else {
+                                showMsg("提示", "删除那玩意操作失败");
+                            }
+                        }
+                    });
+                }
+            });
+        }
+
+        function showMsg(title, msg) {
+            $.messager.alert(title, msg, "info");
+        }
+
+        function clearText() {
+            $("input[type=text]").val("");
+        }
+    </script>
+}

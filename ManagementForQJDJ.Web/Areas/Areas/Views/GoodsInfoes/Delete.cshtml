@@ -1,0 +1,424 @@
+﻿@model QJDJ.Entities.Data.FromSqlModel.GoodsInfo
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>GoodsInfo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ShopInfo.sShopName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ShopInfo.sShopName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.gStationId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gStationId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.gSupplierId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gSupplierId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.gNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.gName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.gThumbImg1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gThumbImg1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.gThumbImg2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gThumbImg2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.gPicArray)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gPicArray)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.gTagText)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gTagText)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.gTagValue1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gTagValue1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.gTagValue2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gTagValue2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.gTagValue3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gTagValue3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.gTagValue4)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gTagValue4)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.gTagValue5)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gTagValue5)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.gTagValue6)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gTagValue6)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.gTagValue7)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gTagValue7)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.gTagValue8)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gTagValue8)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.gTagValue9)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gTagValue9)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.gConentSummary)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gConentSummary)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.gContentDetail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gContentDetail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.gSlogan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gSlogan)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.gReminder)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gReminder)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.gDistribution)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gDistribution)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.gSalesVolume)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gSalesVolume)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.gBrand)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gBrand)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.gSourceArea)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gSourceArea)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.gStoreMode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gStoreMode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.gServiceMode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gServiceMode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.gKeys)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gKeys)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.gLabel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gLabel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.gDiscount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gDiscount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.gWarnCount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gWarnCount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.gSafeDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gSafeDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.gShangjiaDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gShangjiaDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.gXiajiaDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gXiajiaDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.gAddDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gAddDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.gState)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gState)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.gRemark)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gRemark)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.gFillerId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gFillerId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.gFillDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gFillDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.gIsCancel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gIsCancel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.gCancelId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gCancelId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.gCancelDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gCancelDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.gContentDetailUrl)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gContentDetailUrl)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.gShortPinyin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gShortPinyin)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.gStorage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gStorage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.gSeason)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gSeason)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.gDaySalesAverage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gDaySalesAverage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.gExternalNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gExternalNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.gIsUseBean)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gIsUseBean)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
